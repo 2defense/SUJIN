@@ -30,5 +30,5 @@ IMP.init("imp84346376"); // 예: imp00000000
   }
 /*티켓 구매내역 미리띄울게 */
    $('#btnTicket').on('click', function(){
-            $('#content').load('/subi/purchaseTicket');
+            $('#content').load('/order/purchasedTicket');
         })

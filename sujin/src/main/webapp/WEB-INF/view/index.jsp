@@ -19,7 +19,7 @@
 </head>
 <body>
 <header id='IndexHeader'>
-<h2><a href="#" class='TravelMaker'>Travel Maker</a></h2>	
+<h2><a href="/" class='TravelMaker'>Travel Maker</a></h2>	
 <div id='menu'>
 	<ul class='indexUl'>
 		<li><a href="#" class='indexMyPage'>마이페이지</a>

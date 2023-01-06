@@ -1,4 +1,4 @@
-package com.project1.list;
+package com.project1.plan;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +10,7 @@ public class TouristAttractionsController {
 	public ModelAndView select() {
 		ModelAndView mv = new ModelAndView();
 
-		mv.setViewName("subi/TouristAttractionsList");
+		mv.setViewName("plan/TouristAttractionsList");
 		return mv;
 	}
 }

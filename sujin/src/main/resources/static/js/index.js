@@ -79,9 +79,10 @@ function div(){
 }
 div()
 
+ $('#btnSearch').on('click',function(){
+	 $('#content').load('/order/regionSelect');
+ })
 
-/*상세보기 페이지 미리띄울게 */
-   $('#btnSearch').on('click', function(){
-            $('#content').load('/subi/purchaseCheck');
-        })
-    
+$('.indexMenuLi').on('click',function(){
+	 $('#content').load('/member/login');
+ })
