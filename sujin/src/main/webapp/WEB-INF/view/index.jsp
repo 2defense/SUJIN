@@ -3,136 +3,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- content에 자신의 OAuth2.0 클라이언트ID를 넣습니다. -->
-<meta name ="google-signin-client_id" content="AIzaSyDBAyvfoBj784JjkNBP8K_jKpSyfzwC2JE">
-<script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <meta charset="UTF-8">
-<title>SUJIN INDEX</title>
+<title>index.jsp</title>
+<link rel="stylesheet" href="css/index.css"/>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script defer src='../js/index.js'></script>
 </head>
 <body>
-<ul>
-   <li onclick="kakaoLogin();">
-      <a href="javascript:void(0)">
-          <img width="200px" src="../img/kakaoLogin.png" alt="카카오로그인">
-      </a>
-   </li>
-   <li onclick="kakaoLogout();">
-      <a href="javascript:void(0)">
-          <span>카카오 로그아웃</span>
-      </a>
-   </li>
-</ul>
-<ul>
-   <li>
-      <!-- 아래와같이 아이디를 꼭 써준다. -->
-      <a id="naverIdLogin_loginButton" href="javascript:void(0)">
-          <img width="200px" src="../img/naverLogin.png" alt="네이버로그인">
-      </a>
-   </li>
-   <li onclick="naverLogout(); return false;">
-      <a href="javascript:void(0)">
-          <span>네이버 로그아웃</span>
-      </a>
-   </li>
-</ul>
+<header>
+<h2><a href="#">Travel Maker</a></h2>   
+<div id='menu'>
+   <ul>
+      <li><a href="#">마이페이지</a>
+         <ul>
+            <li><a href='#' class='btnMytrip'>내여행</a></li>
+            <li><a href='#' class='btnMyInfo'>기본정보</a></li>
+         </ul>
+      </li>
+      <li><a href="#">후기게시판</a></li>
+      <li><a href="#">회사소개</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">로그인</a>
+   </ul>      
+</div>
+</header>
+<div id='empty'></div>
+<div id='content'>
+   <section id="hero">
+      <div class="bkg-img" style="background-image:url('https://farm4.staticflickr.com/3372/3299941029_0074286419_o.jpg');"></div>
+         <div id='hero-content'>
+            <span id='start'>서울 출발</span>
+            <span id='startDate'>가는 날</span>
+            <input type='date' id='date1' placeholder="날짜 선택"
+                  required aria-required="true"/>
+            <span id='amPm1'>
+               <input type='radio' value='am' name='time1'/>오전
+               <input type='radio' value='pm' name='time1'/>오후
+            </span>
+            <span id='endDate'>오는 날</span>
+            <input type='date' id='date2' placeholder="날짜 선택"
+                  required aria-required="true"/>
+            <span id='amPm2'>
+               <input type='radio' value='am' name='time2'/>오전
+               <input type='radio' value='pm' name='time2'/>오후
+            </span>
+            <span id='people'>인원</span>
+            <input type='text' size='5' id='peopleSu'/>
+            </span>
+            <input type='button' id='btnSearch' value='Search'/>
+         </div>
+   </section>
+   
+   <section class="packages">
+   <h3 class="title">Tour Packages</h3>      
+   <p>We offer a variety of sightseeing and immersion packages. Whether you want to experience the rich culture, immerse yourself in it's natural beauty, or have a relaxing visit, we've got the perfect vacation for you</p>
+   <hr>
+   <ul class="grid">
+      <li>
+         <i class="fa fa-compass fa-4x"></i>
+         <h4>Guided Tours</h4>
+         <p>Looking for the complete experience? Take a tour with one of our experts. Visit the beautiful old temples and churches and the numerous beaches. Sample the local dishes and visit various health or spa retreats to pamper yourself on your vacation. </p>
+      </li>
+      <li>
+         <i class="fa fa-camera-retro fa-4x"></i>
+         <h4>Photo Tours</h4>
+         <p>Want to experience nature's beauty without all the trekking, walking and waiting? Take a photo tour on one of our luxury buses.</p>
+      </li>
+      <li>
+         <i class="fa fa-motorcycle fa-4x"></i>
+         <h4>Bike Tours</h4>
+         <p>A fun  way to experience the local atmosphere while seeing as much of Goa as you can. We'll provide the bikes and lunch too!</p>
+      </li>
+      <li>
+         <i class="fa fa-binoculars fa-4x"></i>
+         <h4>Safari Tours</h4>
+         <p>Looking to see some wildlife? We offer fantastic safari trips! Spend a day out cruising along the back waters of the Zuari River in a giant canoe, returning to camp in the evening to retell your adventures next to the campfire!</p>
+      </li>
+   </ul>
+   </section>   
+   
+   <section class="contact">
+      <h3>Learn More</h3>
+      <p>Want to know about upcoming specials, and value deals? Just sign up for our mailing list. We'll keep you informed on new tour packages and offerings. No  spam, we promise!</p>
+      <hr>   
+      <form>
+         <input type="email" />
+         <button class="btn">subscribe now </button>
+      </form>   
+   </section>   
+</div>
 
-
-
-
+<footer>
+   <p>Images courtesy of <a href="http://www.photosforclass.com/"></a>Photos for Class</p>
+   <p>Visit Goa and have a good time doing it, when you use one or more of our tours...</p>
+   <ul>
+      <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+      <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+      <li><a href="#"><i class="fa fa-snapchat-square fa-2x"></i></a></li>
+   </ul>
+</footer>   
+                                           
+<!--
+https://farm5.staticflickr.com/4005/4267674623_a786e4a440_o.jpg
+https://farm9.staticflickr.com/8334/8103080370_254bcd9f90_o.jpg
+https://farm6.staticflickr.com/5296/5444152459_2bffa50e90_o.jpg
+https://farm1.staticflickr.com/211/535585258_84df3cd5f1_o.jpg
+-->                                          
 </body>
-
-
-
-<script>
-
-var naverLogin = new naver.LoginWithNaverId(
-      {
-         clientId: "73hvBJ8MG3yX2vNbVzeN", //내 애플리케이션 정보에 cliendId를 입력해줍니다.
-         callbackUrl: "http://localhost:9282/naverLogin", // 내 애플리케이션 API설정의 Callback URL 을 입력해줍니다.
-         isPopup: false,
-         callbackHandle: true
-      }
-   );   
-
-naverLogin.init();
-
-window.addEventListener('load', function () {
-   naverLogin.getLoginStatus(function (status) {
-      if (status) {
-         var email = naverLogin.user.getEmail(); // 필수로 설정할것을 받아와 아래처럼 조건문을 줍니다.
-          
-         console.log(naverLogin.user); 
-          
-            if( email == undefined || email == null) {
-            alert("이메일은 필수정보입니다. 정보제공을 동의해주세요.");
-            naverLogin.reprompt();
-            return;
-         }
-      } else {
-         console.log("callback 처리에 실패하였습니다.");
-      }
-   });
-});
-
-
-var testPopUp;
-function openPopUp() {
-    testPopUp= window.open("https://nid.naver.com/nidlogin.logout", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,width=1,height=1");
-}
-function closePopUp(){
-    testPopUp.close();
-}
-
-function naverLogout() {
-   openPopUp();
-   setTimeout(function() {
-      closePopUp();
-      }, 1000);
-   
-   
-}
-
-
-
-
-
-
-Kakao.init('38fcbbc356cdd719e19ce18e5b27584d'); //발급받은 키 중 javascript키를 사용해준다.
-console.log(Kakao.isInitialized()); // sdk초기화여부판단
-//카카오로그인
-function kakaoLogin() {
-    Kakao.Auth.login({
-      success: function (response) {
-        Kakao.API.request({
-          url: '/v2/user/me',
-          success: function (response) {
-             console.log(response)
-          },
-          fail: function (error) {
-            console.log(error)
-          },
-        })
-      },
-      fail: function (error) {
-        console.log(error)
-      },
-    })
-  }
-//카카오로그아웃  
-function kakaoLogout() {
-    if (Kakao.Auth.getAccessToken()) {
-      Kakao.API.request({
-        url: '/v1/user/unlink',
-        success: function (response) {
-           console.log(response)
-        },
-        fail: function (error) {
-          console.log(error)
-        },
-      })
-      Kakao.Auth.setAccessToken(undefined)
-    }
-  }  
-</script>
 </html>
